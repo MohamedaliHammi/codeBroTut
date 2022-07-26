@@ -3,10 +3,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>codeBroTut</title>
 </head>
 <body>
     <h1>codeBroTut</h1>
+    <nav>
+        <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About Us</a></li>
+    <li><a href="#">Contact Us</a></li>
+        </ul>
+    </nav>
+    <main>
+<!-- counter section  -->
+<section id="counter" >
+    <h1>counter</h1>
+  <div id="number">0</div>
+  <div   id="allbtns" >
+  <button onclick id="decreasebtn">decreasse</button>
+  <button id="resetbtn" >reset</button>
+  <button id="increasebtn" >increasse</button>
+  </div>
+ </section>
+ 
+ <!--  random numbers / rolle the dice section -->
+
+ <section id="dices">
+    <h1>rolle the dice</h1>
+    <label id="dice1" for="dice">1</label><br>
+    <label id="dice2" for="dice">2</label><br>
+    <label id="dice3" for="dice">3</label><br>
+    <button id='roller' >Rolle the dice</button>
+ </section>
+    </main>
     <script src="index.js" ></script>
 </body>
 </html>
