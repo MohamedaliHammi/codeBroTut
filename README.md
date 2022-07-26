@@ -1,0 +1,1 @@
+### following a tut and putting all the note in here 
