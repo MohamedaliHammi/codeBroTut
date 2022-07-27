@@ -8,11 +8,15 @@
 </head>
 <body>
     <h1>codeBroTut</h1>
+
+    <!-- NAV BARRE-->
     <nav>
         <ul>
-    <li><a href="#">Home</a></li>
-    <li><a href="#">About Us</a></li>
-    <li><a href="#">Contact Us</a></li>
+    <li><a href="#counter">counter</a></li>
+    <li><a href="#dices">rolle the dice</a></li>
+    <li><a href="#numberGenratorGame">Random Number Generator</a></li>
+    <li><a href="#changementDeTempurature">Tempurature Converter</a></li>
+    <li><a href="#timer">timer</a></li>
         </ul>
     </nav>
     <main>
@@ -24,6 +28,21 @@
   <button onclick id="decreasebtn">decreasse</button>
   <button id="resetbtn" >reset</button>
   <button id="increasebtn" >increasse</button>
+  <span><p>let count = 0;
+    document.getElementById("decreasebtn").onclick = function () {
+        count -= 1;
+        document.getElementById('number').innerHTML = count;
+    };
+    document.getElementById("resetbtn").onclick =function () {
+        count = 0;
+       document.getElementById('number').innerHTML = count; 
+    };
+    
+    document.getElementById("increasebtn").onclick = function () {
+        count += 1;
+        document.getElementById('number').innerText = count;
+    };
+    </p></span>
   </div>
  </section>
  
@@ -39,7 +58,7 @@
  
         <!-- Number generator-->
 
-<section id="number genrator game">
+<section id="numberGenratorGame">
 
    <h1>Random Number Generator</h1>
    <p>pick a # between 1 - 10</p>
@@ -51,9 +70,9 @@
 
            <!-- Temp converter -->
 
-           <section id='changement de tempurature' >
+    <section id='changementDeTempurature' >
 
-
+<h1>Tempurature converter</h1>
 <label>Enter a temperatue:</label><br>
 <input id="textBox"  type="text"><br>
 
@@ -69,6 +88,7 @@
 
 
          <section id="timer">
+            <h1>timer</h1>
   <label id="theTimer">0</label><br>
   <button id="start">Start</button>
   <button id="stop">Stop</button>         

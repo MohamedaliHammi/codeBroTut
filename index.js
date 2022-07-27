@@ -128,8 +128,98 @@ if (document.getElementById('Cbutton').checked){
 
 
 
+  // * arrays 
+
+  let prices = [200, 300, 400, 700, 1000];
+// navigate insice an arr backword
+/*
+  for(let i = prices.length - 1; i  >= 0; i--){
+    console.log(prices[i])
+  }
+  */
+// using for of
+
+for(let price of prices){
+  console.log(price);
+}
+
+// sort() alphabateque order 
+
+let cars = ['Lambo', 'Golf','Ferrari','Megane'];
+cars = cars.sort().reverse();
+for(let car of cars){
+  console.log(car);
+}
+
+// 2D array = an array of arrayys
+
+let fruits = ['appeles', 'bananas', 'dates'];
+let vegtebales = ['onion', 'pepper', 'tomato'];
+let meats = ['steak', 'chicken', 'fish'];
+let groceryList = [fruits, vegtebales, meats];
+
+groceryList[1][0] = 'potato' // lines & columns
 
 
+for(let list of groceryList){
+  for(let food of list){
+    console.log(food);
+  }
+}
+
+// spread operators allows an iterable such as an array or string to be expanded in places where zero or more arguments are expected (unpack the elements)
+
+
+let class1 = ['sabri', 'amine', 'ahmed'];
+let class2 = ['achref', 'lotfi', 'saber'];
+// ! no to do 
+/*
+class1.push(class2);
+console.log(class1);
+*/
+// how to do it
+class1.push(...class2);
+console.log(class1);
+
+
+//* rest parameters 
+
+let a = 1;
+let b = 2;
+let c = 3;
+let d = 8; 
+let j = 8;
+
+function sum(...chiffres){
+  let total = 0;
+  for(let digit of chiffres){
+    total +=  digit;
+  }
+  return total;
+}
+/*
+console.log(sum(a,b,5,j))
+*/
+
+
+//* Call back functions 
+//* call back functions = a function passed as an argument 
+// *    ensure that a function is not going to run before the task is completetd ex wait for a file to download then do something 
+
+/*
+substriction (3,3,displayConsole);
+function substriction (x, y, callBack){
+  let result = x - y;
+  callBack(result);
+}
+
+
+
+function displayConsole(output){
+  console.log(output);
+}
+
+*/
 
 
 
