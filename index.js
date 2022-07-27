@@ -221,5 +221,69 @@ function displayConsole(output){
 
 */
 
+//* Array.map() = excute a providede call back function once for each array element And creates a new array
 
 
+let multipleNumbers = [2, 4, 6, 8, 10, 50, 60, 70, 90 ];
+
+let multipleNumbersPower2 = multipleNumbers.map(powerBytwo);
+multipleNumbersPower2.forEach(printPower2);
+let cubes = multipleNumbers.map(cube);
+cubes.forEach(printCube);
+
+function powerBytwo(elements){
+   return Math.pow( elements, 3);  
+}
+console.log(multipleNumbersPower2);
+
+function printPower2(elements){
+  console.log(`this is the square result ${elements}`)
+}
+
+function cube(element){
+  return Math.pow(element, 4);
+}
+
+function printCube(element){
+  console.log('this is the cube result '  + element)
+}
+
+//* array.filter() = create a new array with all elements that pass the test provided by a fucntion 
+
+let studentAges = [18, 21, 15, 17, 33, 11, 5, 4];
+let studentAge18 = studentAges.filter(checkAge);
+studentAge18.forEach(printAges);
+
+function checkAge(element){
+return element >= 18
+}
+function printAges(elements){
+  console.log(elements)
+}
+
+//* arrays.reduce = reduce an array to a single value.
+
+let pricesInStore = [5, 75, 200, 93, 55, 12, 20, 50];
+let total = pricesInStore.reduce(checkOut);
+console.log(`your total is $${total}`);
+function checkOut(total, elements){
+  return total + elements;
+};
+
+//* array.sort() sort numbers
+
+let grades = [90, 100, 50, 40, 60, 80, 10, 20, 5];
+grades = grades.sort(desendInSort);
+grades.forEach(printGrades)
+
+
+
+function desendInSort(bigger, smaller){
+  return smaller - bigger; // small num to bigger num
+}
+
+
+
+function printGrades (elements){
+  console.log(elements)
+}
