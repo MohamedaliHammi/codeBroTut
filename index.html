@@ -47,11 +47,33 @@
 
    <input placeholder="enter your number here" id="guessField" type="text">
    <input  id="submitButton" type="submit">
-
-
-
-
 </section>
+
+           <!-- Temp converter -->
+
+           <section id='changement de tempurature' >
+
+
+<label>Enter a temperatue:</label><br>
+<input id="textBox"  type="text"><br>
+
+<p>convert to:</p>
+<input type="radio" name="unit" id="Cbutton">
+<label>Celsius</label><br>
+<input type="radio" name="unit" id="Fbutton">
+<label>Frenheit</label><br>
+<button type="submit" id="convertButton">Submit</button><br>
+
+<label id="tempLabel"></label>
+         </section>
+
+
+         <section id="timer">
+  <label id="theTimer">0</label><br>
+  <button id="start">Start</button>
+  <button id="stop">Stop</button>         
+
+         </section>
 
     </main>
     <script src="index.js" ></script>

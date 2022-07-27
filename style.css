@@ -75,4 +75,10 @@ font-size: 30px;
     padding: 10px;
 }
 
-
+#timer{
+    text-align: center;
+    font-size: 50px;
+}
+#timer > button{
+    font-size: 50px;
+}
