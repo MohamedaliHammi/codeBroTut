@@ -287,3 +287,43 @@ function desendInSort(bigger, smaller){
 function printGrades (elements){
   console.log(elements)
 }
+
+
+//* function expression = function a name     (anynymous  avoid polluting the global with scope, write it and forget it!)
+
+//* const function (){}
+
+
+
+//*  Arrow functions 
+
+const percent = (x,y) => x / y * 100;
+
+console.log(`${percent(37,50)}%`)
+
+//* shuffles an arrays ( go back to this)
+
+let cards = ['A', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'Joker'];
+
+shuffle(cards);
+console.log(cards.forEach(printCards));
+
+
+function shuffle(array){
+let cureentIndex = array.length;
+while(cureentIndex != 0){
+  let randomIndex = Math.floor(Math.random() * array.length);
+  cureentIndex -= 1;
+  let temp = array[randomIndex];
+  array[cureentIndex] = temp;
+}
+return array;
+
+ }
+
+ function printCards(elements){
+  console.log(elements);
+ }
+
+
+
