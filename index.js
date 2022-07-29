@@ -326,4 +326,239 @@ return array;
  }
 
 
+ //* map() = object that gold key-value of any data type 
 
+ const store = new Map ([
+  ["t-shirt", 20],
+  ["jeans", 30],
+  ["socks", 25],
+  ["underwear", 50]
+ ]);
+ 
+ //* console.log(store.get("t-shirt"));
+  //* store.set("pull", 30);
+  //*  console.log(store.has("under"));
+   //* store.delete("pull");
+
+
+ store.forEach((value, key) => console.log(`${key} $${value}`));
+
+
+
+ //* this = reference to a particular object the object depends on the immediate context
+
+ let car1 = {
+  model : 'golf',
+  color : 'black',
+  passengers : 5,
+  confortable : false,
+  fuel : 0,
+  checkFuel : function(){
+     if (this.fuel <= 0 ){
+      console.log('refeel the car');
+     }else{
+      console.log('the car is ready to go');
+     }
+  }
+ }
+ car1.fuel = 10;
+ car1.checkFuel();
+
+
+ //* class : a blueprint for creating objects define what properties and methods they have  // use a constructor for unique propertiess
+
+ class Player {
+
+  score = 0;
+
+  pause(){
+   console.log(`you paused the game`);
+  }
+  exit(){
+    console.log(`you exited the game`);
+  }
+ }
+
+ const player1 = new Player();
+ const player2 = new Player();
+
+ player1.score += 3;
+ console.log(player1.score);
+ player1.pause();
+ player2.exit();
+
+ //* constructor = a special method of a class, accepts arguments and assigns properites
+
+ class Student {
+  constructor(name, age, gpa){
+    this.name = name;
+    this.age = age;
+    this.gpa = gpa;
+ }
+  studyHard(){
+    // used this in the function to refere to the imediate name in the class
+    console.log(`${this.name} is studying hard to achieve his goals`)
+  }
+}
+
+const student1 = new Student('patrick', 21, 3.5);
+const student2 = new Student('spongbob', 55, 3.8);
+console.log(student1.name);
+console.log(student1.age);
+console.log(student1.gpa);
+student1.studyHard();
+
+console.log(student2.name);
+console.log(student2.age);
+console.log(student2.gpa);
+student2.studyHard();
+
+//* inherit = a child class can inherit all the methods from the parent to the childs to avoid writing the same code multiple time
+
+// parent 
+class Animal {
+  alive = true;
+
+  eat(){
+    console.log(`${this.name} is eating`);
+   }
+
+}
+
+
+
+// childs
+class Fish extends Animal {
+ name = "fish";
+ swim(){
+  console.log(`this ${this.name} is swimming`);
+ }
+ 
+}
+
+class Hawk extends Animal  {
+  name = "hawk";
+ alive = true;
+  fly(){
+   console.log(`this ${this.name} is flying}`);
+  }
+  eat(){
+   console.log(`${this.name} is eating`);
+  }
+ }
+
+ class Rabbit extends Animal {
+  name = "rabbit";
+  run(){
+   console.log(`this ${this.name} is runing`);
+  }
+  eat(){
+   console.log(`${this.name} is eating`);
+  }
+ }
+
+ const rabbit = new Rabbit();
+ const fish = new Fish();
+ console.log(fish.alive);
+ console.log(rabbit.alive);
+fish.eat();
+rabbit.eat()
+
+//* super ) refers to the parent class commonly used to invok constructor class
+class FarmAnimal {
+  constructor(name, age){
+    this.name = name;
+    this.age = age;
+  }
+}
+
+
+class Sheep extends FarmAnimal {
+
+  constructor(name, age, runSpeed){
+super(name, age); // replcae multiple code with less code from the parent
+  this.runSpeed = runSpeed ;
+}
+}
+
+const sheep = new Sheep('fethi', '6months',5 );
+console.log(sheep.name);
+console.log(sheep.age);
+console.log(sheep.runSpeed);
+
+//* get = binds an object property to a function when that property is accessed getter
+//* setter 
+
+
+//* error = object with a description of something went wrong can't open a file lose connection user types incorrect input typeEror
+//* throw = excute a user-defined error
+
+//* finally work for the cleanup if you open a file and get an error for exampel it's always excute
+
+ 
+try {
+ //let x = window.prompt("enter a number");
+// x = Number(x);
+
+if(isNaN(x)) throw "that wasn't a number!";
+if (x == "") throw "that was empty!";
+console.log(`${x} is a number`)
+
+}
+catch (error){
+  console.log(error);
+}   
+ finally {
+  console.log('pizza')
+ }
+
+ //* setTimeOut() = invokes a function after a number of milleseconds asynchronous function doesn't pause excuestion.
+
+ //* to clear the setTimeOut()
+ //* creat a function and put inside the block code this clearTimeout(timerNumber1) etc
+ 
+/*
+let price = 420.69;
+let item = 'crypto currency'
+
+ let timerNumberOne = setTimeout(firstMessage, 3000,price,item);
+ let timerNumberTwo = setTimeout(secondMessage, 6000);
+
+ let timerNumberThree = setTimeout(thirdMessage, 9000, item);
+
+
+ function firstMessage(price, item){
+  alert(`buy this ${item} for ${price}`);
+ }
+ function secondMessage () {
+  alert(`this is not a scam buy now`);
+ }
+ function thirdMessage(item){
+  alert(`please buy this ${item}`);
+ }
+ */
+
+
+ //* setInterval() = invokes a function repeatedly after number of a millis of seconds asynchronous function (doesn't pause the function);
+/*
+ let countTo10 = 0;
+ max = window.prompt('enter your starting number')
+ max = Number(max);
+
+ let intervale = setInterval(countUp, 1000);
+
+ function countUp(){
+  countTo10 ++ ;
+  console.log(countTo10)
+  if(countTo10 >= 10){
+    clearInterval(intervale)
+  }
+ }
+ */
+
+
+ //* date object is used to work with dates & times
+
+ date = new Date();
+ date = date.toLocaleString();
+document.getElementById('timeDisplay').innerHTML = date;

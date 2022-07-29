@@ -123,3 +123,14 @@ span p {
     color: black;
     
 }
+
+#timeDisplay {
+    font-size: 30px;
+    font-weight: bold;
+    background-color: #55aadd;
+}
+
+#timeDisplay::before{
+    content: "Date and time ";
+    color: blueviolet;
+}
