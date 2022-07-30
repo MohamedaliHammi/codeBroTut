@@ -601,7 +601,7 @@ promise.then(value => console.log(value))
  //* async keyword = makes a function return a Promise.
 //* await = makes an async function wait for a Promise.
 
-
+/*
 async function loadFile(){
   let fileLoad = false;
   if(fileLoad){
@@ -626,6 +626,78 @@ try{
 }
 
 startProcess();
+*/
+
+//* ES6 Modules the idea of a module is that it's a file of reusable so we can import sections of pre-written code to use whenever great for any general utitlity to make your code more reusable and maintenable think of module as seperate chaptre of a book
+
+//* to use moduled go to html script tag and add an atrribue modules ' type ='modules' then creat a new java file
+
+//* in the new file type export (you can find this in the codecamp);
+//* in the master file import() from'./'
+
+//* to import everything import * name from
 
 
 
+
+
+
+//* DOM : document object modules (API) an interface for changing the content of a page(check notes for more info ...)
+
+
+
+//* document.getElementById('id')
+ //*document.getElementsByName('name')
+ //* document.getElementsByClassNaùe('class')
+ //* document.querrySelector(#id or .class or)
+ //* querry selector select only the first element in a group 
+ //* to select all with querrySelectorAll
+
+
+ //* add/change HTML elements
+ //* .innerHTML (vulnerable to XSS attacks)
+ //* .textContent (more secure);
+
+/*
+ const nameTag = document.createElement('h1');
+ nameTag.textContent = window.prompt('enter your name');
+ document.body.append(nameTag);
+ */
+
+
+ //* events is what the user or the web do 
+ //* onclick() / onload() / onchange()/onmouseover() / onmouseout() / onmousedown() /onmouseup()
+
+ 
+
+
+ //* .addEventListener (event,function, userCapture) //* useCapture who excuted first and last ..
+ //* you can add many event handlers to one element
+ //* Even the same event that invokes diffrent functions
+
+
+  innerBox = document.getElementById('innerBox');
+  innerBox.addEventListener('mouseover', changeColor); //call back function no need for ();
+  innerBox.addEventListener('mouseout', changeToGreen);
+
+  function changeColor(){
+    innerBox.style.backgroundColor = "red";
+   
+  }
+  function changeToGreen(){
+    innerBox.style.backgroundColor = 'yellow';}
+
+
+   //* show and hide an html object (text - picture etc..)
+   /*
+   let aButton = document.getElementById('aButton');
+   let shipPic = document.getElementById('shipPic');
+
+   aButton.addEventListener("click", () => {
+     if(shipPic.style.visibility === 'hidden'){
+      shipPic.style.visibility = 'visible';
+     }else{
+      shipPic.style.visibility = "hidden";
+     } 
+   })
+   */
