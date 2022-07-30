@@ -562,3 +562,70 @@ let item = 'crypto currency'
  date = new Date();
  date = date.toLocaleString();
 document.getElementById('timeDisplay').innerHTML = date;
+
+
+
+//* console.time () start a timer you can use to track how lonw operaion takes give each a  unique name.
+/*
+console.time('responsive time');
+*/
+
+
+
+//* promise = object that encpsulates the reesult of an asynchronous operation let asynchronous method return value like synchronous methods "I promise to return something in the future" 
+
+//* the State is 'pending' then: fulfilled or rejected the RESULT is what can be returned 2parts producing & consuming
+
+
+/*
+const promise = new Promise ((resolve, reject) => { 
+ let fileLoaded = false;
+ if(fileLoaded){
+  resolve('file loaded'); // value
+ }else{
+  reject('file not loaded'); // value
+ }
+
+
+});
+// both then and catch are related don't seperate them with a > ;
+// if the promise true resolve 
+promise.then(value => console.log(value))
+// if the promise false reject 
+       .catch(error => console.log(error));
+
+*/
+
+//* writing the promise using both keyword
+
+ //* async keyword = makes a function return a Promise.
+//* await = makes an async function wait for a Promise.
+
+
+async function loadFile(){
+  let fileLoad = false;
+  if(fileLoad){
+    return 'file loaded';
+  }else {
+    throw 'file not loaded';
+  }
+}
+async function startProcess(){
+{let message = await loadFile(); // to the await work we need to place it with async function.
+console.log(message);
+}
+}
+
+// to catch errors
+try{
+  let message = await loadFile();
+  console.log(message);
+
+} catch(error){
+  console.log(error);
+}
+
+startProcess();
+
+
+
